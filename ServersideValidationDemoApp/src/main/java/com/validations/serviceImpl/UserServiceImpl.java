@@ -1,5 +1,6 @@
 package com.validations.serviceImpl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,5 +80,12 @@ public class UserServiceImpl implements UserServiceApi{
 	public void deleteUser(Integer id) {
 		// TODO Auto-generated method stub
 		userRepository.deleteById(id);
+	}
+
+
+	@Override
+	public List<User> getAllUser() {
+		// TODO Auto-generated method stub
+		return (List<User>) userRepository.findAll();
 	}
 }

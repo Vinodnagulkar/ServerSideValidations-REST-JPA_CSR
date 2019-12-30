@@ -1,4 +1,5 @@
 package com.validations.serviceApi;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Component;
@@ -35,6 +36,12 @@ public interface UserServiceApi
 	 * @return User object
 	 */
 	Optional<User> getUserById(Integer id);
+	
+	/**
+	 * This method fetches All User object from DB.
+	 * @return List of User object
+	 */
+	List<User> getAllUser() ;
 	
 	/**
 	 * This method deletes User object based on user id
